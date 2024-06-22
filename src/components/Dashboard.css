@@ -1,0 +1,165 @@
+/* src/components/Dashboard.css */
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.header {
+  color: #1db954;
+  padding: 20px;
+  text-align: left;
+  background-color: #181818;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: #181818;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+
+.albums-songs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.albums,
+.songs {
+  background-color: #181818;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.albums h2,
+.songs h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items with space between */
+  margin-bottom: 15px;
+  background-color: #282828;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+img {
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.artist-name,
+.album-name,
+.track-name {
+  font-size: 1.25rem; /* Adjust font size */
+  color: #ffffff;
+}
+
+.artist-name {
+  font-size: 1.2rem; /* Larger font size for artists */
+  align-content: left;
+}
+
+.artist-name:hover,
+.album-name:hover,
+.track-name:hover {
+  color: #1db954;
+  cursor: pointer;
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-artist {
+  font-size: 0.8rem; /* Smaller font size for track artists */
+  color: #aaaaaa;
+}
+
+.show-more-button {
+  background-color: white;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-more-button:hover {
+  background-color: #147c52;
+}
+
+.play-button {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  margin-left: 10px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #147c52;
+}
+
+/* Adjust the background box size dynamically */
+.albums,
+.songs {
+  min-height: 200px; /* Minimum height for the boxes */
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .albums-songs {
+    grid-template-columns: 1fr;
+  }
+}
